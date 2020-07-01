@@ -1,4 +1,4 @@
-package com.sunasterisk.iflickr.ui.activity
+package com.sunasterisk.iflickr.ui.activity.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
