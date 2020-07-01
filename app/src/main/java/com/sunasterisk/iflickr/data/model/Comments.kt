@@ -2,8 +2,8 @@ package com.sunasterisk.iflickr.data.model
 
 import com.google.gson.annotations.SerializedName
 
-data class PhotoSetTitle (
+data class Comments (
 
-    @SerializedName("_content")
-    val content: String? = ""
+    @SerializedName("comment")
+    val comments: List<Comment>? = null
 )
