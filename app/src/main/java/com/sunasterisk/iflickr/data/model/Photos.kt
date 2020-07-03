@@ -4,6 +4,9 @@ import com.google.gson.annotations.SerializedName
 
 data class Photos (
 
+    @SerializedName("total")
+    var total: String? = "",
+
     @SerializedName("photo")
-    val photos: List<Photo>? = null
+    var photos: List<Photo>? = null
 )

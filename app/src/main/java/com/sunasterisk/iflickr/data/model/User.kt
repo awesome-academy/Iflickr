@@ -1,38 +1,50 @@
 package com.sunasterisk.iflickr.data.model
 
+import androidx.room.Embedded
+import androidx.room.Entity
+import androidx.room.Ignore
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
+import com.sunasterisk.iflickr.data.model.User.Companion.TABLE_NAME
 
-data class User(
+@Entity(tableName = TABLE_NAME)
+data class User (
+
+    @PrimaryKey(autoGenerate = true)
+    var userId: Int? = null,
 
     @SerializedName(NSID)
-    val nsId: String? = "",
+    var nsId: String? = "",
 
     @SerializedName(USER_NAME)
-    val username: Username? = null,
+    @Embedded
+    var username: Username? = null,
 
     @SerializedName(FIRST_NAME)
-    val firstName: String? = "",
+    var firstName: String? = "",
 
     @SerializedName(LAST_NAME)
-    val lastName: String? = "",
+    var lastName: String? = "",
 
     @SerializedName(PROFILE_DESCRIPTION)
-    val profileDescription: String? = "",
-
-    @SerializedName(PUBLIC_PHOTOS)
-    val publicPhotos: List<Photo>? = null,
+    var profileDescription: String? = "",
 
     @SerializedName(HOMETOWN)
-    val hometown: String? = "",
+    var hometown: String? = "",
 
     @SerializedName(CITY)
-    val city: String? = "",
+    var city: String? = "",
 
     @SerializedName(COUNTRY)
-    val country: String? = ""
+    var country: String? = "",
+
+    @Ignore
+    @SerializedName(PUBLIC_PHOTOS)
+    var publicPhotos: Photos? = null
 ) {
 
     companion object {
+        const val TABLE_NAME = "tbl_user"
         const val NSID = "nsid"
         const val USER_NAME = "username"
         const val FIRST_NAME = "first_name"

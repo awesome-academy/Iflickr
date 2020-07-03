@@ -6,5 +6,5 @@ import com.sunasterisk.iflickr.data.model.Comments
 data class PhotoCommentsResponse (
 
     @SerializedName("comments")
-    val comments: Comments? = null
+    var comments: Comments? = null
 )

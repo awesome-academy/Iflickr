@@ -1,29 +1,37 @@
 package com.sunasterisk.iflickr.data.model
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
+import com.sunasterisk.iflickr.data.model.Photo.Companion.TABLE_NAME
 
-data class Photo(
+@Entity(tableName = TABLE_NAME)
+data class Photo (
+
+    @PrimaryKey(autoGenerate = true)
+    var photoId: Int? = null,
 
     @SerializedName(ID)
-    val id: String? = "",
+    var id: String? = "",
 
     @SerializedName(OWNER)
-    val owner: String? = "",
+    var owner: String? = "",
 
     @SerializedName(SECRET)
-    val secret: String? = "",
+    var secret: String? = "",
 
     @SerializedName(SERVER)
-    val server: String? = "",
+    var server: String? = "",
 
     @SerializedName(FARM)
-    val farm: String? = "",
+    var farm: String? = "",
 
     @SerializedName(TITLE)
-    val title: String? = ""
+    var title: String? = ""
 ) {
 
     companion object {
+        const val TABLE_NAME = "tbl_photo"
         const val ID = "id"
         const val OWNER = "owner"
         const val SECRET = "secret"
