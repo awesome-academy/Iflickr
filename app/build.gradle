@@ -53,4 +53,8 @@ dependencies {
     annotationProcessor 'androidx.room:room-compiler:2.2.5'
     kapt "android.arch.persistence.room:compiler:1.1.1"
     kapt "androidx.room:room-compiler:2.2.5"
+
+    // Koin for Android
+    implementation "org.koin:koin-android:2.0.1"
+    implementation "org.koin:koin-android-viewmodel:2.0.1"
 }
