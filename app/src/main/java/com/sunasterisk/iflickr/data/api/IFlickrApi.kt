@@ -6,7 +6,7 @@ import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Query
 
-interface ApiService {
+interface IFlickrApi {
 
     @GET(Request.URL_FIND_USER_BY_USER_NAME)
     fun findUserByUsername(

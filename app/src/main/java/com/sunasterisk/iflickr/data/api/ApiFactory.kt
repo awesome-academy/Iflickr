@@ -6,7 +6,7 @@ import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 
-interface ApiFactory {
+object ApiFactory {
 
     private val httpClient: OkHttpClient.Builder
         get() = OkHttpClient.Builder().addInterceptor { chain ->
@@ -23,6 +23,8 @@ interface ApiFactory {
             chain.proceed(request)
         }
 
+    fun buildClient() = httpClient.build() as OkHttpClient
+
     fun <T> buildApi(
         baseUrl: String,
         restApi: Class<T>,
@@ -32,7 +34,7 @@ interface ApiFactory {
     ): T = Retrofit.Builder().baseUrl(baseUrl)
         .addConverterFactory(converterFactory)
         .addCallAdapterFactory(callAdapterFactory)
-        .client(httpClient.build())
+        .client(client)
         .build()
         .create(restApi)
 }
