@@ -6,5 +6,5 @@ import com.sunasterisk.iflickr.data.model.FavoritePerson
 data class PhotoFavoritePersonsResponse (
 
     @SerializedName("photo")
-    val favoritePersons: List<FavoritePerson>? = null
+    var favoritePersons: List<FavoritePerson>? = null
 )

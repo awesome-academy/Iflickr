@@ -6,5 +6,5 @@ import com.sunasterisk.iflickr.data.model.User
 data class UserResponse (
 
     @SerializedName("user")
-    val user: User? = null
+    var user: User? = null
 )

@@ -5,5 +5,5 @@ import com.google.gson.annotations.SerializedName
 data class Comments (
 
     @SerializedName("comment")
-    val comments: List<Comment>? = null
+    var comments: List<Comment>? = null
 )

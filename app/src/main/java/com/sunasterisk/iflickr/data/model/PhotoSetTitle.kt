@@ -5,5 +5,5 @@ import com.google.gson.annotations.SerializedName
 data class PhotoSetTitle (
 
     @SerializedName("_content")
-    val content: String? = ""
+    var content: String? = ""
 )

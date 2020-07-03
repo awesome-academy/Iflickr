@@ -6,5 +6,5 @@ import com.sunasterisk.iflickr.data.model.Photos
 data class PublicPhotosResponse (
 
     @SerializedName("photos")
-    val photos: Photos? = null
+    var photos: Photos? = null
 )

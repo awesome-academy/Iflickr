@@ -5,5 +5,5 @@ import com.google.gson.annotations.SerializedName
 data class FavoritePerson (
 
     @SerializedName("person")
-    val user: User? = null
+    var user: User? = null
 )

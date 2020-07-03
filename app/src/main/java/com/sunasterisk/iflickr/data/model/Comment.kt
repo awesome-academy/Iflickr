@@ -4,31 +4,21 @@ import com.google.gson.annotations.SerializedName
 
 data class Comment (
 
-    @SerializedName(ID)
-    val id: String? = "",
+    @SerializedName("id")
+    var id: String? = "",
 
-    @SerializedName(AUTHOR_NAME)
-    val authorName: String? = "",
+    @SerializedName("authorname")
+    var authorName: String? = "",
 
-    @SerializedName(ICON_SERVER)
-    val iconServer: String? = "",
+    @SerializedName("iconserver")
+    var iconServer: String? = "",
 
-    @SerializedName(ICON_FARM)
-    val iconFarm: String? = "",
+    @SerializedName("iconfarm")
+    var iconFarm: String? = "",
 
-    @SerializedName(REAL_NAME)
-    val realName: String? = "",
+    @SerializedName("realname")
+    var realName: String? = "",
 
-    @SerializedName(CONTENT)
-    val content: String? = ""
-) {
-
-    companion object {
-        const val ID = "id"
-        const val AUTHOR_NAME = "authorname"
-        const val ICON_SERVER = "iconserver"
-        const val ICON_FARM = "iconfarm"
-        const val REAL_NAME = "realname"
-        const val CONTENT = "_content"
-    }
-}
+    @SerializedName("_content")
+    var content: String? = ""
+)
